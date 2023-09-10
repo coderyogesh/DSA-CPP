@@ -6,7 +6,7 @@ int getPivot(int arr[], int n)
     int s = 0;
     int e = n - 1;
     int mid = s + (e - s) / 2;
-    while (s <= e)
+    while (s < e)
     {
         if (arr[mid] >= arr[0])
         {
@@ -16,7 +16,7 @@ int getPivot(int arr[], int n)
         {
             e = mid;
         }
-        mid = s + (e - s) / 2
+        mid = s + (e - s) / 2;
     }
     return s;
 }
@@ -24,5 +24,5 @@ int getPivot(int arr[], int n)
 int main()
 {
     int arr[5] = {8, 10, 17, 1, 3};
-    cout << "Pivot is" << getPivot(arr, 5) << endl;
+    cout << "Pivot is: " << getPivot(arr, 5) << endl;
 }
